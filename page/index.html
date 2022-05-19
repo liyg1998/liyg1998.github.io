@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-    
     <head>
     <meta content="en-us" http-equiv="Content-Language" />
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
@@ -19,7 +18,7 @@
         }
     </script>
     </head>
-    
+
     <style>
     /*     <div id="yiyan" style="width: 500px;background-color:rgba(255, 255, 255, 0);">
             <br />
@@ -27,8 +26,8 @@
             <br />
             <script src="./js/hitokoto.js"></script>
             <scr
-    
-    
+
+
             <div id="yiyan" style="width: 500px;background-color:rgba(255, 255, 255, 0);">
     <br />
     <br />
@@ -50,7 +49,7 @@
     ajax.open('GET',url, true);
     ajax.send();
     }
-    
+
     else{
         var count=Math.floor(Math.random()*hit.length);
         var ran=hit[count];
@@ -58,13 +57,13 @@
        var author=ran.source;
        document.getElementById("yiyan").innerHTML="<br />"+text+"<br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp——"+author;
     } */
-        
+
         /*翻译开始*/
         * {
             padding: 0;
             margin: 0;
         }
-    
+
         /*
         主页整体样式
         文本对齐：中心
@@ -77,7 +76,7 @@
             background-repeat: no-repeat;
             background-color: #ffffff;
         }
-    
+
         /*
         搜索栏字体样式 
         宽度︰ 90%;
@@ -101,7 +100,7 @@
             padding: 0 10px;
             border-radius: 50px;
         }
-    
+
         /*
         搜索框边距 
         下边距︰ 30px;
@@ -111,7 +110,7 @@
     	    margin-bottom: 5px;
     	    margin-top: 15px;
         }
-    
+
         /*
         跨度样式
         显示︰ 阻止;
@@ -119,7 +118,7 @@
         左填充︰ 5px;
         垂直对齐︰ 居中;
         */
-    
+
         .search_bar span {
         	display: block;
         	font-size: 12px;
@@ -139,7 +138,7 @@
         .search_bar .si {
         	margin: 0 38px 0 10px;
         }
-    
+
         /*搜索建议条*/
         #suggest {
         	position: absolute;
@@ -171,7 +170,7 @@
         	color: #888;
         	padding-right: 12px;
         }
-    
+
         /*搜索栏框架样式：
         框阴影︰ 0 0 18px rgba(70,70,40,.255);括号里的颜色为Rgb默认，可进入http://rgb.phpddt.com/查询
         -webkit 动画︰ fadeIn 2.5;
@@ -185,22 +184,48 @@
         最大宽度︰ 400px;
         边距︰ 10px 默认布局;
         */
-        .search_bar {
+        /* .search_bar {
         	box-shadow: 0 0 5px rgba(70,70,40,.255);
         	-webkit-animation: fadeIn 2.5s;
         	animation: fadeIn 2.5s;
-        	background-color:  rgba(255,255,255,.0);
+            background-color:  rgba(255,255,255,.0);
         	border-radius: 3px;
         	display: table;
         	vertical-align: middle;
-        	width: 85%;
+        	width: 80%;
         	height: 20px;
         	max-width: 400px;
         	margin: 10px auto;
         	position: relative;
         	z-index: 10;
+        } */
+
+        .search_bar {
+            box-shadow: 0 0 18px rgba(70,70,40,0.255);
+            background:rgba(255,255,255,0.5);
+            backdrop-filter: blur(5px);
+            background-color: rgba(255,255,255,0.255);
+            border-radius: 50px;
+            display: table;
+            width: 80%;
+            height: 40px;
+            max-width: 400px;
+            margin: 10px auto;
+            text-align: center;
+            font-size: 30px;
+            border: 0;
+            outline: none;
+            font-weight: 560;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            animation: search-bar 2.3s;
         }
-    
+
+        @keyframes search-bar {
+            0%{max-width: 150px;}
+            100%{max-width: 400px;}
+        }
+
         /*搜索栏搜索目标确认图标样式，目前为米奇
         轮廓边框︰ 0;
         高度︰ 40px;
@@ -223,7 +248,7 @@
         	background-color: transparent;
         	padding: 0 13px 0 13px
         }
-    
+
         /*
         书签图标排版目录样式 
         宽度︰ 100%;
@@ -237,7 +262,7 @@
         	padding-top: 0px;
         	padding-bottom: 0px;
         }
-    
+
         /*
         书签框架样式
         -webkit 动画︰ fadeInDown 1s;
@@ -255,7 +280,7 @@
         	width: 70px;
         	border: 0;
         }
-    
+
         /*
         书签图标样式
         宽度︰ 100%;
@@ -271,7 +296,7 @@
         	left: 0;
         	top: 0;
         }
-    
+
         /*
         书签字体样式
         颜色: #232323;使用夜间模式时修改为#eee或者#f2eada即可
@@ -307,20 +332,20 @@
         	padding-top: 0px;
         	padding-bottom: 8px;
         }
-    
+
         /*翻译
         字体样式 
         宽度︰ 3em;
         高度︰ 3em;
         最大宽度︰ 72px;
         */
-    
+
         .icon {
         	width: 3em;
         	height: 3em;
         	max-width: 72px;
         }
-    
+
         #app-items {
         	width: 100%;
         	max-width: 400px;
@@ -330,7 +355,7 @@
         	padding-top: 0px;
         	padding-bottom: 15px;
         }
-    
+
         .title {
             background-color: #ffffff;
             font-size: 16px;
@@ -338,9 +363,9 @@
             line-height: 30px;
             padding: 0 10px 0 20px;
             color: #4a4266;
-        
+
         }
-    
+
         #yiyan {
         	width: 100%;
         	max-width: 400px;
@@ -350,7 +375,7 @@
         	padding-top: 0px;
         	padding-bottom: 15px;
         }
-    
+
         .shuxing {
             color: #4a4266;
             font-size: 12px;
@@ -358,24 +383,24 @@
             line-height: 20px;
             padding: 0 10px 0 20px;
         }
-    
+
         @-webkit-keyframes flipInX {
         	0% {
         		-webkit-transform: perspective(400px) rotateX(90deg);
         		transform: perspective(400px) rotateX(90deg);
         		opacity: 0
         	}
-        
+
         	40% {
         		-webkit-transform: perspective(400px) rotateX(-10deg);
         		transform: perspective(400px) rotateX(-10deg)
         	}
-        
+
         	70% {
         		-webkit-transform: perspective(400px) rotateX(10deg);
         		transform: perspective(400px) rotateX(10deg)
         	}
-        
+
         	100% {
         		-webkit-transform: perspective(400px) rotateX(0);
         		transform: perspective(400px) rotateX(0);
@@ -389,19 +414,19 @@
         		transform: perspective(400px) rotateX(90deg);
         		opacity: 0
         	}
-        
+
         	40% {
         		-webkit-transform: perspective(400px) rotateX(-10deg);
         		-ms-transform: perspective(400px) rotateX(-10deg);
         		transform: perspective(400px) rotateX(-10deg)
         	}
-        
+
         	70% {
         		-webkit-transform: perspective(400px) rotateX(10deg);
         		-ms-transform: perspective(400px) rotateX(10deg);
         		transform: perspective(400px) rotateX(10deg)
         	}
-        
+
         	100% {
         		-webkit-transform: perspective(400px) rotateX(0);
         		-ms-transform: perspective(400px) rotateX(0);
@@ -409,12 +434,12 @@
         		opacity: 1
         	}
         }
-    
+
         @-webkit-keyframes fadeIn {
         	0% {
         		opacity: 0
         	}
-        
+
         	100% {
         		opacity: 1
         	}
@@ -423,19 +448,19 @@
         	0% {
         		opacity: 0
         	}
-        
+
         	100% {
         		opacity: 1
         	}
         }
-    
+
         @-webkit-keyframes fadeInDown {
         	0% {
         		opacity: 0;
         		-webkit-transform: translateY(-20px);
         		transform: translateY(-20px)
         	}
-        
+
         	100% {
         		opacity: 1;
         		-webkit-transform: translateY(0);
@@ -449,7 +474,7 @@
         		-ms-transform: translateY(-20px);
         		transform: translateY(-20px)
         	}
-        
+
         	100% {
         		opacity: 1;
         		-webkit-transform: translateY(0);
@@ -458,13 +483,13 @@
         	}
         }
     </style>
-    
+
     <body>
         <div id="content">
-            <br \>
+            <br />
             <div class="search_part">
                 <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-                <img class="smaller" src="images/google.gif" width=33% ></img>
+                <a href="folder://"><img class="smaller" src="images/google.gif" width=33% ></img></a>
                 <form id="search_form" onsubmit="return search()" class="search_bar">
                     <input type="submit" id="search_submit" value="☯" >
                     <span><i id="clear" onclick="clear_seach()"></i>
@@ -478,42 +503,47 @@
             </div>
         </div>
         <br />
-    
+
         <div class="box">
             <a href="http://guozhivip.com/"></a>
             <p><img class="icon" src="images/guozi.png" ></p>
             <p class="url">果汁导航</p>
         </div>
-    
+
         <div class="box">
             <a href="folder://"></a>
             <p><img class="icon" src="images/shuqian.png" ></p>
             <p class="url">书签</p>
         </div>
-    
+
         <div class="box">
             <a href="history://"></a>
             <p><img class="icon" src="images/lishi.png" ></p>
             <p class="url">足迹</p>
         </div>
-    
+
         <div class="box">
             <a href="https://600s.com/liyg"></a>
             <p><img class="icon" src="images/600s.png" ></p>
             <p class="url">同步</p>
         </div>
-    
+
         <br>
         <font color="#303030">
         <font size="6">―·❀·―</font>
         <table width="32" border="0"> 
         <br>
+
+        <div class="shuxing"> 
+            <script type="text/javascript" src="http://open.iciba.com/ds_open.php?id=54055&name=%E4%BF%9D%E5%BE%B7%E5%9C%A8%E7%BA%BF&auth=226994D1666A2E1E3E3D71C79CA27C72" charset="utf-8"></script> 
         </div>
-    
+
+        </div>
+
         <br>
         <script type="text/javascript" src="https://api.lwl12.com/hitokoto/main/get?encode=js&charset=utf-8"></script><div id="lwlhitokoto"><script>lwlhitokoto()</script></div>
         </div>
-    
+
         <script type="text/javascript">
             var last_kw = '';
             var max_sug_len = 1; //搜索建议最短触发长度
@@ -541,7 +571,7 @@
             	};
             	head.appendChild(script);
             }
-        
+
             function jsonp3(res) {
             	var suggest = document.getElementById('suggest');
             	if (!res.r || !res.r.length) {
@@ -555,16 +585,16 @@
             	document.getElementById('suglist').innerHTML = html;
             	suggest.style.display = 'block';
             }
-        
+
             function close_sug() {
             	last_kw = '';
             	document.getElementById('suggest').style.display = 'none';
             }
-        
+
             function move_input() {
             	document.body.scrollTop = document.getElementById('search_form').offsetTop - 2;
             }
-        
+
             function clear_seach() {
             	var input = document.getElementById('search_input');
             	input.value = '';
@@ -572,7 +602,7 @@
             	close_sug();
             	input.focus();
             }
-        
+
             function search(){if(document.getElementById("search_input").value != ""){
             window.location.href = "http://m.baidu.com/s?ie=utf-8&rn=30&rsv_enter=0&wd=" + encodeURIComponent(document.getElementById("search_input").value) + "&from=smor&safe=1&snum=1";
             document.getElementById("search_input").value = "";}return false;}
@@ -588,8 +618,26 @@
             		search();
             	}
             });
-        
+
             window.addEventListener('resize', move_input);
         </script>
     </body>
+
+    <!-- 不知道干嘛用 -->
+    <script charset="gbk" src="https://www.baidu.com/js/opensug.js"></script>
+    <script type="text/javascript">
+    BaiduSuggestion.bind('search_submit', {  // Input ID
+          "XOffset": "0",             // Proposal frame position X offset, unit px.
+          "YOffset": "0",             // Prompt box position vertical Y offset, unit px.
+          "fontColor": "#ff0000",       // Prompt text color.
+          "fontColorHI": "#0000ff",     // Prompt box highlight text color when selected.
+          "fontSize": "14px",           // font size
+          "fontFamily": "Microsoft YaHei",    // Text fontFamily.
+          "borderColor": "#008000",     // Prompt box border color.
+          "bgcolorHI": "#f0f0f0",       // Prompt box highlights the selected color.
+          "sugSubmit": true             // Whether to submit the form when the entry in the prompt box is selected.
+      }, function(Callback){console.log('You have chosen：'+ Callback);});
+    </script>
+
+
 </html>
